@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="Store"
+            type="com.example.wedoit.repository.entities.StoreEntities" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_store_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_store_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="Ultra-Power Laundry"
+            android:text="@{Store.storeName}"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_store_description"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="56 Malasimbo St. Brgy Masambong Quezon City"
+            android:text="@{Store.storeAddress}"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_store_rate"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="P.60.00 Per Kilo"
+            android:text="@{Store.cutomizerRate}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_inquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/inquiry" />
+
+
+    </LinearLayout>
+
+</layout>

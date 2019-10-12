@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="deliveryManFragment"
+            type="com.example.wedoit.transaction.delivery.DeliveryManBottomFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_found_delivery_man"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/yes_we_already_found_your_delivery_man_lbl"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/image_view_delivery_profile"
+            app:layout_constraintStart_toStartOf="@id/image_view_delivery_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_delivery_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/kanna"
+            app:civ_border_color="@color/md_grey_100"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_found_delivery_man" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_rider_name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/sample_delivery_name"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/button_accept_driver"
+            app:layout_constraintEnd_toEndOf="@id/image_view_delivery_profile"
+            app:layout_constraintStart_toStartOf="@id/image_view_delivery_profile"
+            app:layout_constraintTop_toBottomOf="@id/image_view_delivery_profile" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_accept_driver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/accept_lbl"
+            app:icon="@drawable/ic_check_accept"
+            app:iconGravity="textStart"
+            android:onClick="@{() -> deliveryManFragment.acceptDeliveryMan()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_denied_driver"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_denied_driver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/cancel_lbl"
+            app:icon="@drawable/ic_cancel"
+            app:iconGravity="textStart"
+            android:onClick="@{() -> deliveryManFragment.cancelDeliveryMan()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_accept_driver"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

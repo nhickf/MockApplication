@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mock Application</string>
+    <string name="inquiry">Inquiry</string>
+    <string name="order_summary_lbl">Order Summary</string>
+    <string name="total_amount_lbl">Total Amount :</string>
+    <string name="check_out_lbl">Check out</string>
+    <string name="show_cart_lbl">Show Cart</string>
+    <string name="find_rider_lbl">Find Rider</string>
+    <string name="order_preview_lbl">Order Preview</string>
+    <string name="your_current_location_lbl">Your Current Location</string>
+    <string name="store_name_lbl">Store Name</string>
+    <string name="searching_your_delivery_man_lbl">Searching your delivery man ...</string>
+    <string name="accept_lbl">Accept</string>
+    <string name="yes_we_already_found_your_delivery_man_lbl">Yes, We already found your delivery man</string>
+    <string name="sample_delivery_name">Kanna Hashimoto</string>
+    <string name="cancel_lbl">Cancel</string>
+</resources>
